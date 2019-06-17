@@ -7,20 +7,19 @@ public class Transaction {
 	static enum TransactionType {
 		DEPOSIT,
 		WITHDRAW
-	}
+	}	
 	
-	
-	private float amount;
+	private double amount;
 	private TransactionType type;
 	private LocalDateTime date;
 		
-	public Transaction(TransactionType type, float amount) {
+	public Transaction(TransactionType type, double amount) {
 		this.amount = amount;
 		this.type = type;
 		this.date = LocalDateTime.now();
 	}	
 	
-	public float getAmount() {
+	public double getAmount() {
 		return amount;
 	}
 	public TransactionType getType() {
